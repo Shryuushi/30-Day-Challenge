@@ -37,7 +37,7 @@ export default function GroceryListScreen({navigation}) {
   }
 
   let addToDoItem = () => {
-    let newItem = { key: data.toString(data.length + 1), description: textInputValue, completed: false }
+    let newItem = { key: (data.length + 1).toString(), description: textInputValue, completed: false }
     let addItem = data.concat(newItem)
     setData(addItem)
     console.log(data.key)
@@ -52,12 +52,12 @@ export default function GroceryListScreen({navigation}) {
   return (
     <SafeAreaView style={styles.container}>
       <Card>
-        <Card.Title style={styles.header}>To Do App</Card.Title>
+        <Card.Title style={styles.header}>Make a Grocery List for the Week!</Card.Title>
+        <Text style={{textAlign:"center"}}>Keep track of what you need to eat healthy all week long.</Text>
         <FlatList data={data} renderItem={renderItem}></FlatList>
         <Card>
           <TextInput style={styles.input} value={textInputValue} onChangeText={changedText} onKeyPress={handleKeyPress}></TextInput>
           <Button title="Add new item" onPress={addToDoItem} style={styles.button}></Button>
-          <Button title="Go Home" style={{ padding: 10 }} onPress={() => navigation.navigate('Home')}></Button>
         </Card>
       </Card>
     </SafeAreaView >

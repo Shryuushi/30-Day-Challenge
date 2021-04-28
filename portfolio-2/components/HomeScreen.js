@@ -1,6 +1,6 @@
 import * as React from 'react';
 import { View, Text, StyleSheet } from 'react-native';
-import { Button } from 'react-native-elements'
+import { Button } from 'react-native-elements';
 
 const styles = StyleSheet.create({
     buttonStyle: {
@@ -16,15 +16,11 @@ export default function HomeScreen({navigation}) {
     return (
         <View style={{
             flex: 1,
-            flexDirection: "row",
+            flexDirection: "column",
             alignItems: "center",
             justifyContent:"center"
         }}>
-            <Button 
-                title="Grocery List"
-                style={styles.buttonStyle}
-                onPress = {() => navigation.push('Details')}
-            ></Button>
+        <Text>Welcome to Your 30 Day Challenge!</Text>
         </View>
     )
 }

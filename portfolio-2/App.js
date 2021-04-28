@@ -1,23 +1,23 @@
-import React from 'react';
+import * as React from 'react';
 import { StyleSheet } from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
-import { createStackNavigator } from '@react-navigation/stack';
+//import { createStackNavigator } from '@react-navigation/stack';
+import {createBottomTabNavigator} from '@react-navigation/bottom-tabs'
 import HomeScreen from './components/HomeScreen'
-import { SafeAreaProvider } from 'react-native-safe-area-context';
 import GroceryListScreen from './components/GroceryListScreen';
+import CalendarScreen from './components/CalendarScreen'
 
-const Stack = createStackNavigator();
+const Tab = createBottomTabNavigator();
 
 export default function App() {
   return (
-    <SafeAreaProvider>
-      <NavigationContainer>
-        <Stack.Navigator initialRouteName="Home">
-          <Stack.Screen name="Home" component={HomeScreen} />
-          <Stack.Screen name="Details" component={GroceryListScreen}/>
-        </Stack.Navigator>
-      </NavigationContainer>
-    </SafeAreaProvider>
+    <NavigationContainer>
+      <Tab.Navigator initialRouteName="Home">
+        <Tab.Screen name="Home" component={HomeScreen} />
+        <Tab.Screen name="Grocery" component={GroceryListScreen} options={{title: "Grocery List"}}/>
+        <Tab.Screen name="Calendar" component={CalendarScreen} options={{title : "Calendar"}}/>
+      </Tab.Navigator>
+    </NavigationContainer>
   );
 }
 
