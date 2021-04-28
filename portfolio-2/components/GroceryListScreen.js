@@ -2,7 +2,7 @@ import React from 'react';
 import { StyleSheet, FlatList, SafeAreaView, TextInput, View, Text } from 'react-native';
 import { Card, CheckBox, Button } from 'react-native-elements';
 
-export default function GroceryListScreen() {
+export default function GroceryListScreen({navigation}) {
   let [textInputValue, setTextInputValue] = React.useState("")
   let [data, setData] = React.useState([])
 
@@ -57,6 +57,7 @@ export default function GroceryListScreen() {
         <Card>
           <TextInput style={styles.input} value={textInputValue} onChangeText={changedText} onKeyPress={handleKeyPress}></TextInput>
           <Button title="Add new item" onPress={addToDoItem} style={styles.button}></Button>
+          <Button title="Go Home" style={{ padding: 10 }} onPress={() => navigation.navigate('Home')}></Button>
         </Card>
       </Card>
     </SafeAreaView >
