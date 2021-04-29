@@ -23,7 +23,8 @@ export default function HomeScreen({navigation}) {
       <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
         {!login ?
           <>
-            <Text>Welcome, Please log in below!</Text>
+            <Text style={{fontSize:20}}>Welcome to your 30 Day Challenge! </Text>
+            <Text>Please log in below!</Text>
             <Button
               onPress={() => setShowLogin(true)}
               title="Login"
@@ -32,7 +33,8 @@ export default function HomeScreen({navigation}) {
           </>
           :
           <>
-            <Text>Welcome, {username}</Text>
+            <Text style={{fontSize:20}}>Welcome to Your 30 Day Challenge!</Text>
+            <Text>{username}, you have 30 Days left in your challege!</Text>
             <Button
               onPress={() => setLogin(false)}
               title="Logout"
