@@ -14,7 +14,7 @@ const styles = StyleSheet.create({
     }
 })
 
-export default function HomeScreen({navigation}) {
+export default function HomeScreen() {
     const [showLogin, setShowLogin] = useState(false)
     const [login, setLogin] = useState(false)
     const [username, setUsername] = useState("")
