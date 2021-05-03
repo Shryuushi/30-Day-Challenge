@@ -1,34 +1,57 @@
 import React from 'react';
 import { useState } from 'react';
-import { StyleSheet, Text, View, TouchableOpacity, MaskedViewComponent } from 'react-native';
-import { Calendar } from 'react-native-calendars';
-import moment from 'moment'
+import { StyleSheet, Text, View, TouchableOpacity } from 'react-native';
+import { Agenda } from 'react-native-calendars';
+
+const timeToString = (time) => {
+  const date = new Date(time);
+  return date.toISOString().split('T')[0];
+}
 
 export default function CalendarScreen({navigation, route}) {
-    let date = moment().format("YYYY-MM-DD")
+    const [items, setItems] = useState({})
+   
+    let loadItems =(day) => {
+      setTimeout(() => {
+        for (let i = -15; i < 85; i++) {
+          const time = day.timestamp + i * 24 * 60 * 60 * 1000;
+          const strTime = timeToString(time);
+          if (!items[strTime]) {
+            items[strTime] = [];
+            items[strTime].push({
+              name: 'Workout for Today',
+              height: Math.max(50, Math.floor(Math.random() * 150))
+            });
+          }
+        }
+        const newItems = {};
+        Object.keys(items).forEach(key => {
+          newItems[key] = items[key];
+        });
+        setItems(newItems)}, 1000);
+    }
 
-    const [selectedDate, setSelectedDate] = useState([])
-
+    let renderItem = (item) => {
+      return (
+        <TouchableOpacity style={styles.item}>
+          <Text>{item.name}</Text>
+        </TouchableOpacity>
+      );
+    }
+      
     return (
       <>
         <View style={{flex:1, padding:10}}>
             <Text style={{fontSize:30, fontWeight:"bold", textAlign:"center"}}>Calendar</Text>
-            <Calendar
-                current= {date}
-                onDayPress={(day) => setSelectedDate(day.dateString)}
-                markedDates= {{[selectedDate] :{
-                  selected: true,
-                  disabledTouchEvent: true,
-                  selectedColor: '#F1EFFE',
-                  selectedTextColor: '#7954FA',
-                  onDayPress: navigation.navigate('Workouts')
-                }}}
+            <Agenda
+                items={items}
+                loadItemsForMonth={loadItems}
+                renderItem={renderItem}
             />
         </View>
       </>
     )
 }
-
 
 
 const styles = StyleSheet.create({

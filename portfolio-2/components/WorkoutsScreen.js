@@ -1,10 +1,11 @@
 import React from 'react' 
 import { useState } from 'react'
-import { View } from 'react-native'
-import EventCalendar from 'react-native-events-calendar'
+import { View, StyleSheet, Text, TouchableOpacity } from 'react-native'
+import { CalendarProvider, Timeline, ExpandableCalendar } from 'react-native-calendars'
 
 export default function WorkoutScreen() {
-    const [events, setEvents] = useState([
+    const [date, setCurrentDate] = useState('2021-05-03')
+    const events = [
         {
         start: '2021-04-01 01:00:00',
         end: '2021-04-01 01:30:00',
@@ -77,14 +78,61 @@ export default function WorkoutScreen() {
         summary: 'Merge Timeline Calendar to React Native Calendars'
         }
       
-    ])
+    ]
+
+    let onDateChanged = (date) => {
+        setCurrentDate({date});
+      };
+
+    let renderEmptyItem = () => {
+        return (
+          <View>
+            <Text>No Events Planned</Text>
+          </View>
+        );
+      }
+
+    let renderItem = ({item}) => {
+        if (_.isEmpty(item)) {
+            return renderEmptyItem();
+          }
+          
+        return (
+          <TouchableOpacity style={styles.item}>
+            <View>
+              <Text>{events.hour}</Text>
+              <Text>{item.duration}</Text>
+            </View>
+            <Text>{item.title}</Text>
+            <View>
+              <Button title={'Info'} />
+            </View>
+          </TouchableOpacity>
+        );
+      };
+
     return (
-        <View>
-            <EventCalendar
-                initDate={'2021-04-01'}
-                events={() => setEvents(events)}
-                style={{backgroundColor:"white", opacity: 0.5}}
-            />
-        </View>
+        <CalendarProvider
+            date={date}
+            onDateChanged={onDateChanged}
+        >
+            <ExpandableCalendar></ExpandableCalendar>
+            <Timeline
+                renderItem={renderItem}
+                events={events.filter(event => (event.start), (setCurrentDate))}
+            >
+            </Timeline>
+        </CalendarProvider>
     )
 };
+
+const styles = StyleSheet.create({
+    item: {
+      backgroundColor: 'white',
+      flex: 1,
+      borderRadius: 5,
+      padding: 10,
+      marginRight: 10,
+      marginTop: 17
+    },
+  });
