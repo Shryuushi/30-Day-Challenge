@@ -1,6 +1,7 @@
 import React from 'react';
 import { useState } from 'react';
-import { StyleSheet, Text, View, TouchableOpacity } from 'react-native';
+import { StyleSheet, Text, View } from 'react-native';
+import {Button} from 'react-native-elements';
 import { Agenda } from 'react-native-calendars';
 
 const timeToString = (time) => {
@@ -8,7 +9,7 @@ const timeToString = (time) => {
   return date.toISOString().split('T')[0];
 }
 
-export default function CalendarScreen({navigation, route}) {
+export default function CalendarScreen({navigation}) {
     const [items, setItems] = useState({})
    
     let loadItems =(day) => {
@@ -33,9 +34,12 @@ export default function CalendarScreen({navigation, route}) {
 
     let renderItem = (item) => {
       return (
-        <TouchableOpacity style={styles.item}>
-          <Text>{item.name}</Text>
-        </TouchableOpacity>
+        <Button 
+          style={styles.item}
+          title={item.name}
+          onPress={() => navigation.navigate('Workouts')}
+        >
+        </Button>
       );
     }
       

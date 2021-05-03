@@ -34,7 +34,7 @@ export default function HomeScreen() {
           :
           <>
             <Text style={{fontSize:20}}>Welcome to Your 30 Day Challenge!</Text>
-            <Text>{username}, you have 30 Days left in your challege!</Text>
+            <Text>Welcome back, {username}!</Text>
             <Button
               onPress={() => setLogin(false)}
               title="Logout"

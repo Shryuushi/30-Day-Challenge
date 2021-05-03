@@ -18,7 +18,7 @@ export default function App() {
         <Tab.Screen name="Home" component={HomeScreen} />
         <Tab.Screen name="Grocery" component={GroceryListScreen} options={{title: "Grocery List"}}/>
         <Tab.Screen name="Date" component={CalendarScreen} options={{title : "Calendar"}}/>
-        <Tab.Screen name="Workouts"  component={WorkoutScreen} options={{title: "Workouts For Day"}}/>
+        <Tab.Screen name="Workouts" component={WorkoutScreen}/>
         <Tab.Screen name="Stopwatch"  component={StopwatchScreen} options={{title: "Stopwatch"}}/>
       </Tab.Navigator>
     </NavigationContainer>
