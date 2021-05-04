@@ -1,0 +1,41 @@
+{
+  "files": {
+    "app.js": "/30-Day-Challenge/static/js/app.88690dd9.chunk.js",
+    "app.js.map": "/30-Day-Challenge/static/js/app.88690dd9.chunk.js.map",
+    "runtime~app.js": "/30-Day-Challenge/static/js/runtime~app.f974f4b8.js",
+    "runtime~app.js.map": "/30-Day-Challenge/static/js/runtime~app.f974f4b8.js.map",
+    "static/js/2.5d647c1f.chunk.js": "/30-Day-Challenge/static/js/2.5d647c1f.chunk.js",
+    "static/js/2.5d647c1f.chunk.js.map": "/30-Day-Challenge/static/js/2.5d647c1f.chunk.js.map",
+    "fonts/AntDesign.ttf": "/30-Day-Challenge/./fonts/AntDesign.ttf",
+    "fonts/Entypo.ttf": "/30-Day-Challenge/./fonts/Entypo.ttf",
+    "fonts/Feather.ttf": "/30-Day-Challenge/./fonts/Feather.ttf",
+    "fonts/FontAwesome.ttf": "/30-Day-Challenge/./fonts/FontAwesome.ttf",
+    "fonts/FontAwesome5_Brands.ttf": "/30-Day-Challenge/./fonts/FontAwesome5_Brands.ttf",
+    "fonts/FontAwesome5_Solid.ttf": "/30-Day-Challenge/./fonts/FontAwesome5_Solid.ttf",
+    "fonts/Fontisto.ttf": "/30-Day-Challenge/./fonts/Fontisto.ttf",
+    "fonts/Foundation.ttf": "/30-Day-Challenge/./fonts/Foundation.ttf",
+    "fonts/Ionicons.ttf": "/30-Day-Challenge/./fonts/Ionicons.ttf",
+    "fonts/MaterialCommunityIcons.ttf": "/30-Day-Challenge/./fonts/MaterialCommunityIcons.ttf",
+    "fonts/MaterialIcons.ttf": "/30-Day-Challenge/./fonts/MaterialIcons.ttf",
+    "fonts/SimpleLineIcons.ttf": "/30-Day-Challenge/./fonts/SimpleLineIcons.ttf",
+    "favicon-16.png": "/30-Day-Challenge/favicon-16.png",
+    "favicon-32.png": "/30-Day-Challenge/favicon-32.png",
+    "favicon.ico": "/30-Day-Challenge/favicon.ico",
+    "index.html": "/30-Day-Challenge/index.html",
+    "manifest.json": "/30-Day-Challenge/manifest.json",
+    "serve.json": "/30-Day-Challenge/serve.json",
+    "static/js/2.5d647c1f.chunk.js.LICENSE.txt": "/30-Day-Challenge/static/js/2.5d647c1f.chunk.js.LICENSE.txt",
+    "static/media/bell.png": "/30-Day-Challenge/static/media/bell.cf04af27.png",
+    "static/media/heart.png": "/30-Day-Challenge/static/media/heart.23b5c2c0.png",
+    "static/media/jumping-jacks.gif": "/30-Day-Challenge/static/media/jumping-jacks.4c038987.gif",
+    "static/media/push-ups.gif": "/30-Day-Challenge/static/media/push-ups.28ff80f4.gif",
+    "static/media/rocket.png": "/30-Day-Challenge/static/media/rocket.d2f3bf41.png",
+    "static/media/sit-ups.gif": "/30-Day-Challenge/static/media/sit-ups.9798498f.gif",
+    "static/media/star.png": "/30-Day-Challenge/static/media/star.69c71386.png"
+  },
+  "entrypoints": [
+    "static/js/runtime~app.f974f4b8.js",
+    "static/js/2.5d647c1f.chunk.js",
+    "static/js/app.88690dd9.chunk.js"
+  ]
+}
