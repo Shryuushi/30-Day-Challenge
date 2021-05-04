@@ -1,8 +1,11 @@
 # 30-Day-Challenge
 
+# GitHub Pages : 
+    https://shryuushi.github.io/30-Day-Challenge/
+
 # Option 1 : Exercise App
-This program utlizes past projects, adds new components, and 
-refactures the navigation to use both Stack and Bottom Tab Navigation
+    This program utlizes past projects, adds new components, and 
+    refactures the navigation to use both Stack and Bottom Tab Navigation
 
 # Home Screen :
     Utilizes a login feature to allow user to login and displays
@@ -40,5 +43,3 @@ refactures the navigation to use both Stack and Bottom Tab Navigation
     This screen utilizing the stopwatch-time package, I used the base
     code provided in the package details, redefined them to useState 
     protocol and designed it to fit the theme of the app.
-
-GitHub Pages :
