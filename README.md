@@ -38,8 +38,12 @@
 
     reference :
         https://github.com/wix/react-native-calendars/blob/master/example/src/screens/agenda.js
+        https://www.npmjs.com/package/react-native-calendars
 
 # Stopwatch Screen : 
     This screen utilizing the stopwatch-time package, I used the base
     code provided in the package details, redefined them to useState 
     protocol and designed it to fit the theme of the app.
+    
+    reference :
+        https://www.npmjs.com/package/react-native-stopwatch-timer
