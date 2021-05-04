@@ -34,25 +34,29 @@ export default function CalendarScreen({navigation}) {
 
     let renderItem = (item) => {
       return (
-        <Button 
-          style={styles.item}
-          title={item.name}
-          onPress={() => navigation.navigate('Workouts')}
-        >
-        </Button>
+        <>
+          <View>
+            <Button 
+              style={styles.item}
+              title={item.name}
+              onPress={() => navigation.navigate('Workouts')}
+            >
+            </Button>
+          </View>
+        </>
       );
     }
       
     return (
       <>
-        <View style={{flex:1, padding:10}}>
-            <Text style={{fontSize:30, fontWeight:"bold", textAlign:"center"}}>Calendar</Text>
-            <Agenda
-                items={items}
-                loadItemsForMonth={loadItems}
-                renderItem={renderItem}
-            />
-        </View>
+          <View style={{flex:1, padding:10, margin: 10}}>
+              <Text style={{fontSize:30, fontWeight:"bold", textAlign:"center", padding:5}}>Calendar</Text>
+              <Agenda
+                  items={items}
+                  loadItemsForMonth={loadItems}
+                  renderItem={renderItem}
+              />
+          </View>
       </>
     )
 }
@@ -60,8 +64,10 @@ export default function CalendarScreen({navigation}) {
 
 const styles = StyleSheet.create({
   item: {
-    backgroundColor: 'white',
     flex: 1,
+    flexDirection: "row",
+    alignContent:"space-between",
+    backgroundColor:"white",
     borderRadius: 5,
     padding: 10,
     marginRight: 10,

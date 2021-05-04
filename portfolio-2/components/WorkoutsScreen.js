@@ -3,7 +3,6 @@ import { createStackNavigator } from '@react-navigation/stack';
 import { NavigationContainer } from '@react-navigation/native';
 import ExercisesScreen from './ExercisesScreen';
 import DetailsScreen from './DetailsScreen';
-import CalendarScreen from './CalendarScreen';
 
 const Stack = createStackNavigator();
 

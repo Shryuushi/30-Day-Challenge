@@ -69,6 +69,7 @@ const styles = StyleSheet.create({
     flex: 1,
     margin: 5,
     marginTop: 40,
+    backgroundColor:"#afabeb",
   },
   body: {
     flex: 1,
